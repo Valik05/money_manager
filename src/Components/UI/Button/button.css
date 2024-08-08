@@ -1,0 +1,41 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    height: 55px;
+
+    border: 0;
+    border-bottom: 1px solid #A9AC5D;
+    outline: 0;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Julius';
+    font-size: 1.5em;
+    color: #6D6C3C;
+
+    background: transparent;
+
+    text-align: center;
+}
+
+.btn .text {
+    user-select: none;
+    text-shadow: 0.25px 0.25px 0.25px #a9ac5d4b;
+}
+
+.btn:active>.text {
+    transform: translate3d(1px, 1px, 0px);
+    text-shadow: 0px 0px 0px #A9AC5D;
+}
+
+.red {
+    color: #AC5D66;
+}
+
+.green {
+    color: #A9AC5D;
+}

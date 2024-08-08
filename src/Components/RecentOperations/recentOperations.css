@@ -1,0 +1,10 @@
+.recent-operations-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.recent-operations-container .recent-operations {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}

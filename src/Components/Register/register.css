@@ -1,0 +1,13 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    color: #6D6C3C;
+}
+
+.register-container .inputs-container {
+    display: flex;
+    flex-direction: column;
+}

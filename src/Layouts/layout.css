@@ -1,0 +1,67 @@
+.layout-container {
+    position: relative;
+
+    padding: 28px 20px;
+
+    height: 100%;
+
+    font-family: 'Julius';
+}
+
+.transition-add-operation-switch-enter {
+    transform: translateX(100%);
+}
+
+.transition-add-operation-switch-enter-active {
+    transform: translateX(0);
+    transition: all 0.5s ease-in;
+}
+
+.transition-add-operation-switch-exit {
+    transform: translateX(0);
+    transition: all 0.5s ease-out;
+}
+
+.transition-add-operation-switch-exit-active {
+    transform: translateX(-100%);
+}
+
+.transition-list-item-enter {
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.transition-list-item-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-in;
+}
+
+.transition-list-item-exit {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.2s ease-out;
+}
+
+.transition-list-item-exit-active {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.transition-smooth-enter {
+    opacity: 0;
+}
+
+.transition-smooth-enter-active {
+    opacity: 1;
+    transition: all 0.2s ease-in;
+}
+
+.transition-smooth-exit {
+    opacity: 1;
+    transition: all 0.2s ease-out;
+}
+
+.transition-smooth-exit-active {
+    opacity: 0;
+}

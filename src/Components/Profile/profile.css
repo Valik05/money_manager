@@ -1,0 +1,22 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 45px 0 3px;
+}
+
+.profile-container .money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Julius';
+    font-size: 5em;
+    color: #3A3C26;
+
+    height: 165px;
+
+    border-bottom: 1px solid #A9AC5D;
+
+    background: transparent;
+}

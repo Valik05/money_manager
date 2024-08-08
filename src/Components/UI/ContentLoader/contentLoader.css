@@ -1,0 +1,58 @@
+.content-loader-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 0 45px 0 3px;
+
+    height: 100%;
+}
+
+.content-loader-container .title-loader {
+    height: 75px;
+}
+
+
+.content-loader-container .money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Julius';
+    font-size: 5em;
+    color: #3A3C26;
+
+    height: 165px;
+
+    background: transparent;
+}
+
+.content-loader-container .recent-transactions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content-loader-container .recent-transactions .add-operation {
+    height: 70px;
+}
+
+.background-opacity {
+    width: 100%;
+    height: 95%;
+
+    opacity: .7;
+    animation: skeleton-loading 1s linear infinite alternate;
+
+    border-radius: 10px;
+}
+
+@keyframes skeleton-loading {
+    0% {
+        background-color: hsl(32.02deg 16.52% 71.07%);
+    }
+
+    100% {
+        background-color: hsl(34.23deg 63.17% 48.22% / 28%);
+    }
+}

@@ -1,0 +1,26 @@
+.auth-page-container {
+    display: flex;
+    gap: 12px;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 30px;
+    box-shadow: -4px 4px 4.4px 5px #A9AC5D40;
+
+    overflow: hidden;
+}
+
+.auth-page-container .auth-page-nav {
+    width: 25%;
+    height: 100%;
+    padding: 0 12.5px;
+
+    border-radius: 30px;
+    box-shadow: 4px 4px 4.4px 0px #A9AC5D40;
+}
+
+.auth-page-container .auth-page-content {
+    width: 75%;
+    height: 100%;
+}
