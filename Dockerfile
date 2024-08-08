@@ -17,7 +17,7 @@ RUN npm install --save-dev @babel/plugin-proposal-private-property-in-object
 COPY . .
 EXPOSE 8000
 # Команда для сборки проекта Vue.js
-RUN npm run build
+RUN npm run-script build
 
 # Команда для запуска приложения (здесь можно использовать любой веб-сервер, например, serve)
-CMD ["npm", "start"]
+CMD ["npm", "run-script", "preview"]
