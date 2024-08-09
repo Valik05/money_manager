@@ -68,7 +68,7 @@ export const UserProvider = ({ children }: Props) => {
         await loginAPI(dates)
             .then((res) => {
                 if (res) {
-                    showSystemMsg({ type: 'success', text: 'Succesful Login' });
+                    showSystemMsg({ type: 'success', text: 'Login Succesful' });
                     localStorage.setItem("refreshToken", res.refresh);
                     localStorage.setItem("accessToken", res.access);
                     setToken(res.access);

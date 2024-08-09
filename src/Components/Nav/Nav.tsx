@@ -10,7 +10,7 @@ type Props = {
 const Nav = ({ nav_items, query = false }: Props) => {
     return (
         <div className='nav-container'>
-            <Title title='MENU' type={['center']} />
+            <Title title='Menu' type={['center']} />
             <ul className="nav-items-list">
                 {nav_items.map((item, index) => {
                     return <NavItem title={item} query={query} key={index} />

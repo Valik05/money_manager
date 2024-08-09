@@ -43,7 +43,6 @@ const List = ({ items, type }: Props) => {
                                 callback={() => changeItem(item, index)}
                                 open={open}
                                 length={item.length}
-                                key={index}
                             />
                         </CSSTransition>
                     </SwitchTransition>

@@ -33,7 +33,7 @@ export const OperationProvider = ({ children }: Props) => {
                 logout()
                 console.log(error);
             })
-    }, [logout])
+    }, [])
 
     const createOperation = async (dates: FieldValues) => {
         await createOperationAPI(dates)
