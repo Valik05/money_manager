@@ -7,18 +7,20 @@ WORKDIR /app
 # Копируем package.json и package-lock.json для установки зависимостей
 COPY package*.json ./
 
-
 # Установка зависимостей
 RUN npm install
-RUN npm install --save-dev @babel/plugin-proposal-private-property-in-object
-
 
 # Копируем все файлы из текущей директории в рабочую директорию контейнера
 COPY . .
-EXPOSE 4173
-# Команда для сборки проекта Vue.js
 
-RUN npm run build 
+# Собираем проект, чтобы создать директорию dist
+RUN npm run build
 
-# Команда для запуска приложения (здесь можно использовать любой веб-сервер, например, serve)
-CMD ["npm", "run", "preview", "--", "--host"]
+# Устанавливаем сервер для раздачи статических файлов
+RUN npm install -g serve
+
+# Открываем порт 8000 (или другой, если требуется)
+EXPOSE 8000
+
+# Команда для запуска сервера, который будет отдавать файлы из dist
+CMD ["serve", "-s", "dist", "-l", "8000"]
