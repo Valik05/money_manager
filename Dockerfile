@@ -1,6 +1,10 @@
 # Используйте базовый образ с Node.js
 FROM node
 
+# Устанавливаем переменные окружения на этапе сборки
+ARG VITE_APP_BASE_API_URL
+ENV VITE_APP_BASE_API_URL=${VITE_APP_BASE_API_URL}
+
 # Установите рабочую директорию внутри контейнера
 WORKDIR /app
 
