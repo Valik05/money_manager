@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
 
-    font-family: 'Julius';
+    font-family: var(--font-latin), var(--font-kiril);
     font-size: 1.5em;
     color: #6D6C3C;
 

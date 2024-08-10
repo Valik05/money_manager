@@ -23,7 +23,7 @@ const Slide = ({ Path }: Props) => {
     return (
         <li className="slide-item" ref={ref}>
             <SwitchTransition mode='out-in'>
-                <CSSTransition key={lazyComp} timeout={300} classNames='transition-smooth'>
+                <CSSTransition key={Number(lazyComp)} timeout={300} classNames='transition-smooth'>
                     <Suspense fallback={<ContentLoader />}>
                         {lazyComp || <ContentLoader />}
                     </Suspense>

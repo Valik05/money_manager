@@ -7,16 +7,18 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
     id: string,
     register: UseFormRegister<FieldValues>,
     options?: RegisterOptions,
+    styles?: string[],
 }
 
-const Input = ({ isError = false, id, register, options, ...inputProps }: Props) => {
+const Input = ({ isError = false, id, register, options, styles, ...inputProps }: Props) => {
     return (
-        <input
-            id={id}
-            className={classNames('input-content', { error: isError })}
-            {...register(id, options)}
-            {...inputProps}
-        />
+        <label className={classNames('input-content', { error: isError }, styles)} htmlFor={id}>
+            <input
+                id={id}
+                {...register(id, options)}
+                {...inputProps}
+            />
+        </label>
     )
 };
 

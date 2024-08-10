@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 
-type props = [React.MutableRefObject<HTMLElement | undefined>, () => void, boolean]
+type props = [React.MutableRefObject<HTMLElement | null>, () => void, boolean]
 
 const useOutlineClick = (...[ref, fn, isFnNeedToCall]: props) => {
     useEffect(() => {

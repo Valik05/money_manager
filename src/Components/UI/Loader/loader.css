@@ -1,63 +1,65 @@
 .loader-container {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     height: 100%;
+    width: 100%;
+
     position: fixed;
+
     top: 0;
     left: 0;
-    background: #E8E1DB;
-    /* #000 */
-    filter: blur(10px) contrast(20);
 }
 
-.loader-container .blob-1,
-.loader-container .blob-2 {
-    width: 70px;
-    height: 70px;
-    position: absolute;
-    background: #fb3700;
-    /* #fff */
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.loader-container .loader {
+    width: 80px;
+    aspect-ratio: 1;
+    display: grid;
 }
 
-.loader-container .blob-1 {
-    left: 20%;
-    animation: osc-l 2.5s ease infinite;
+.loader-container .loader:before,
+.loader-container .loader:after {
+    content: "";
+    grid-area: 1/1;
+    --c: #0000 calc(100%/3), #A9AC5D 0 calc(2*100%/3), #0000 0;
+    --c1: linear-gradient(90deg, var(--c));
+    --c2: linear-gradient(0deg, var(--c));
+    background: var(--c1), var(--c2), var(--c1), var(--c2);
+    background-size: 300% 4px, 4px 300%;
+    background-repeat: no-repeat;
+    animation: l11 1s infinite linear;
 }
 
-.loader-container .blob-2 {
-    left: 80%;
-    animation: osc-r 2.5s ease infinite;
-    background: #bfb210;
-    /* #0ff */
+.loader-container .loader:after {
+    margin: 10px;
+    transform: scaleX(-1);
+    animation-delay: -.25s;
 }
 
-@keyframes osc-l {
+@keyframes l11 {
     0% {
-        left: 20%;
+        background-position: 50% 0, 100% 100%, 0 100%, 0 0
+    }
+
+    25% {
+        background-position: 0 0, 100% 50%, 0 100%, 0 0
     }
 
     50% {
-        left: 50%;
+        background-position: 0 0, 100% 0, 50% 100%, 0 0
+    }
+
+    75% {
+        background-position: 0 0, 100% 0, 100% 100%, 0 50%
+    }
+
+    75.01% {
+        background-position: 100% 0, 100% 0, 100% 100%, 0 50%
     }
 
     100% {
-        left: 20%;
-    }
-}
-
-@keyframes osc-r {
-    0% {
-        left: 80%;
-    }
-
-    50% {
-        left: 50%;
-    }
-
-    100% {
-        left: 80%;
+        background-position: 50% 0, 100% 0, 100% 100%, 0 100%
     }
 }

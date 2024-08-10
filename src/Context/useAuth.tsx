@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { UserProfile } from "../Models/User";
 import { FieldValues } from "react-hook-form";
 import { useSystemMsg } from "./useSystemMsg";
@@ -12,6 +12,7 @@ import Loader from "../Components/UI/Loader/Loader";
 type UserContextType = {
     user: UserProfile | null;
     token: string | null;
+    getUser: () => void,
     registerUser: (dates: FieldValues) => void;
     loginUser: (dates: FieldValues) => void;
     logout: () => void;
@@ -29,9 +30,10 @@ export const UserProvider = ({ children }: Props) => {
     const [user, setUser] = useState<UserProfile | null>(null);
     const [isReady, setIsReady] = useState(false);
 
-    useEffect(() => {
+    const getUser = useCallback(async () => {
+        setIsReady(false)
         const access = localStorage.getItem("accessToken");
-        getUserAPI()
+        await getUserAPI()
             .then((res) => {
                 if (res) {
                     console.log(res);
@@ -41,10 +43,21 @@ export const UserProvider = ({ children }: Props) => {
                 }
             })
             .catch((error) => {
-                console.log(error);
+                if (typeof error === 'object') {
+                    if ('messages' in error
+                        && Array.isArray(error.messages)
+                        && error.messages.length !== 0
+                        && 'message' in error.messages[0]) return showSystemMsg({ type: 'error', text: error.messages[0].message + '(' })
+                }
+                if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => setIsReady(true))
-    }, [token]);
+    }, [])
+
+    useEffect(() => {
+        getUser()
+    }, [token, getUser]);
+
     const registerUser = async (dates: FieldValues) => {
         setIsReady(false)
         await registerAPI(dates)
@@ -96,7 +109,7 @@ export const UserProvider = ({ children }: Props) => {
 
     return (
         <UserContext.Provider
-            value={{ loginUser, user, token, logout, isLoggedIn, registerUser }}
+            value={{ loginUser, user, token, logout, isLoggedIn, registerUser, getUser }}
         >
             {isReady ? children : <Loader />}
         </UserContext.Provider>

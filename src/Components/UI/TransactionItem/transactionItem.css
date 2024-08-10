@@ -1,42 +1,116 @@
 .transaction-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    position: relative;
 
-    height: 70px;
+    display: flex;
+    flex-direction: column;
 
     border-bottom: 1px solid #A9AC5D;
+
+    overflow: hidden;
+
+    transition: 0.5s all ease-in;
+
+    padding-bottom: 0.5em;
 }
 
-.transaction-item .amount {
-    text-align: center;
+.transaction-item table {
+    table-layout: auto;
 
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    width: 100%;
+}
+
+.transaction-item table td {
+    padding: 0;
+}
+
+.transaction-item table .detail-text-box {
+    position: relative;
+
+    width: 5%;
+}
+
+.transaction-item table .text {
+    font-size: 1.25em;
+
+    transition: 0.3s all ease-out;
+
+    color: #6D6C3C;
+
+    opacity: 0;
+}
+
+.transaction-item table .text.active {
+    transform: rotateZ(-90deg);
+
+    opacity: 1;
+}
+
+.transaction-item .detail-text-box hr {
+    transition: all 0.5s ease-in-out;
+
+    position: absolute;
+
+    padding: 0;
+    margin: 0;
+
+    height: 0%;
+
+    right: 10%;
+    bottom: 0;
+
+    border: 0;
+    border-right: 1px solid #A9AC5D;
+}
+
+.transaction-item .detail-text-box hr.active {
+    height: 97%;
+}
+
+.transaction-item .short-info {
+    cursor: pointer;
+
+    height: 55px;
+}
+
+.transaction-item .short-info .amount {
     font-size: 2.5em;
     color: #A9AC5D;
 
-    width: 28%;
+    width: 20%;
 }
 
-.transaction-item .amount span {
+.transaction-item .short-info .amount span {
     font-size: 0.75em;
 }
 
-.transaction-item .description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.transaction-item .short-info .description {
+    text-align: center;
 
-    font-size: 1.25em;
+    font-size: 1.125em;
     color: #6D6C3C;
 
     width: 67%;
 }
 
-.transaction-item .icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.transaction-item .short-info .icon {
+    text-align: center;
 
     font-size: 1.75em;
     color: #6D6C3C;
+
+    width: 3.5%;
+
+    transition: all 0.5s linear;
+}
+
+.transaction-item .short-info .icon.active {
+    transform: rotateZ(180deg);
+}
+
+.transaction-item table .detail-item {
+    color: #6D6C3C;
+    padding: 1em 0;
 }

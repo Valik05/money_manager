@@ -9,7 +9,7 @@ import { useSystemMsg } from '../../Context/useSystemMsg';
 
 const AddOperation = () => {
     const { showSystemMsg } = useSystemMsg();
-    const { handleOperation, createOperation } = useOperation();
+    const { handleOperation, createOperation, isAddingOperation } = useOperation();
     const { handleSubmit, register, formState: { errors } } = useForm({ mode: 'onChange' });
     const checkFields = () => {
         for (const value of Object.values(errors)) {
@@ -34,7 +34,7 @@ const AddOperation = () => {
         <form className='add-operation-container' onSubmit={handleSubmit(submit)}>
             <Title title="Adding Operations:" type={['first-letter', 'padding-left']} />
             <Input
-                id='name'
+                id='description'
                 register={register}
                 options={{ required: true }}
                 type='text'
@@ -59,7 +59,7 @@ const AddOperation = () => {
                 autoComplete='off'
             />
             <Button text='Add' styles={['green']} type='submit' onClick={checkFields} />
-            <Button text='Cancel' styles={['red']} onClick={handleOperation} />
+            <Button text='Cancel' styles={['red']} disabled={!isAddingOperation} onClick={handleOperation} />
         </form>
     )
 };

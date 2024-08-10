@@ -26,7 +26,7 @@ const ListItem = ({ value, index, callback, open, length }: Props) => {
             <CSSTransition key={isDelayed} timeout={200} classNames={'transition-list-item'}>
                 {
                     isDelayed === 1 ?
-                        <li className={classNames('list-item-container', { 'no-border': index === 0 }, { 'no-background': index === 0 })}
+                        <li className={classNames('list-item-container', { 'no-border': index === 0 })}
                             style={{ "zIndex": length - index }}
                             onClick={callback}>
                             <div className="text">{value}</div>

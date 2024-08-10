@@ -15,8 +15,10 @@ RUN npm install --save-dev @babel/plugin-proposal-private-property-in-object
 
 # Копируем все файлы из текущей директории в рабочую директорию контейнера
 COPY . .
-EXPOSE 8000
+EXPOSE 4173
 # Команда для сборки проекта Vue.js
 
+RUN npm run build 
+
 # Команда для запуска приложения (здесь можно использовать любой веб-сервер, например, serve)
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+CMD ["npm", "run", "preview"]
