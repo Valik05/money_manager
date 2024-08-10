@@ -12,7 +12,7 @@ export default defineConfig({
     hmr: {
       overlay: false,
       host: "localhost",
-      protocol: "wss",
+      protocol: "ws",
       clientPort: 8000,
       port: 5173
     },
