@@ -1,6 +1,10 @@
 # Используйте базовый образ с Node.js
 FROM node
 
+# Устанавливаем переменные окружения на этапе сборки
+ARG VITE_APP_BASE_API_URL
+ENV VITE_APP_BASE_API_URL=https://back-cash-planner.sitera.tech/api/v1
+
 # Установите рабочую директорию внутри контейнера
 WORKDIR /app
 

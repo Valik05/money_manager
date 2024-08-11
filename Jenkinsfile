@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        VITE_APP_BASE_API_URL = "https://back-cash-planner.sitera.tech/api/v1"
         DOCKERHUB_CREDENTIALS = credentials('docker-iuda')
         IMAGE_NAME = "iuda194/sicst_front:prod"
     }
