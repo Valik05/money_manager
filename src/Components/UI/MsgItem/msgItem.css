@@ -3,7 +3,7 @@
     grid-template-columns: fit-content(100%) 2fr;
     grid-column-gap: 10px;
 
-    padding: 16px 19px;
+    padding: 1em 1.25em;
 
     width: 425px;
 
@@ -17,8 +17,8 @@
 
     flex: 0 0 auto;
 
-    width: 28px;
-    height: 28px;
+    width: 1.75em;
+    height: 1.75em;
 }
 
 .system-msg-content .text {
@@ -49,9 +49,9 @@
 .system-msg-content.warning>.icon {
     width: 0;
     height: 0;
-    border: 14px solid transparent;
+    border: 0.875em solid transparent;
     border-top: none;
-    border-bottom: 24px solid rgba(172, 155, 93, 0.85);
+    border-bottom: 1.25em solid rgba(172, 155, 93, 0.85);
 }
 
 .system-msg-content.error {
@@ -61,4 +61,12 @@
 
 .system-msg-content.error>.icon {
     background: #AC5D66;
+}
+
+@media (min-width: 1600px) {
+    .system-msg-content {
+        width: 750px;
+
+        border-radius: 30px;
+    }
 }

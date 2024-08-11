@@ -21,3 +21,13 @@
 .title.first-letter span::first-letter {
     font-size: 1.5em;
 }
+
+@media (min-width: 1600px) {
+    .title {
+        height: 120px;
+    }
+
+    .title.padding-left {
+        padding-left: 1vw;
+    }
+}

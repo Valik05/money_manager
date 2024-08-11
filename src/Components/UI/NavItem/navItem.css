@@ -84,3 +84,9 @@
     height: 40%;
     width: 75%;
 }
+
+@media (min-width: 1600px) {
+    .nav-item {
+        height: 100px;
+    }
+}

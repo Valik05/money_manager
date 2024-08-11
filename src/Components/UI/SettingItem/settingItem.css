@@ -18,11 +18,16 @@
 .setting-item-container .name {
     width: 30%;
 
-    margin-left: 5px;
-
     text-align: center;
 }
 
 .setting-item-container .value {
     width: 70%;
+}
+
+
+@media (min-width: 1600px) {
+    .setting-item-container {
+        height: 100px;
+    }
 }

@@ -20,7 +20,7 @@
 .list-item-container::before {
     content: "";
 
-    height: 40px;
+    height: 75%;
     width: 100%;
 
     transition: all 0.1s linear;
@@ -35,7 +35,7 @@
 .list-item-container::after {
     content: "";
 
-    height: 40px;
+    height: 75%;
     width: 100%;
 
     transition: all 0.1s linear;
@@ -47,12 +47,12 @@
 }
 
 .list-item-container:hover:after {
-    height: 30px;
+    height: 60%;
     width: 95%;
 }
 
 .list-item-container:active:after {
-    height: 25px;
+    height: 50%;
     width: 92.5%;
 }
 
@@ -68,4 +68,11 @@
 
 .list-item-container.no-border {
     border-bottom: 0;
+}
+
+@media (min-width: 1600px) {
+    .list-item-container {
+        height: 97px;
+    }
+
 }

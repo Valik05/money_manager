@@ -16,7 +16,7 @@ const TransactionItem = ({ amount, currency, description, date }: Props) => {
     const [showDetails, setShowDetails] = useState(0);
     const throttledDetails = useDebounce(showDetails, 500);
     return (
-        <li className='transaction-item' style={{ "maxHeight": showDetails === 1 ? "263.8px" : "55px" }}>
+        <li className={classNames('transaction-item', { active: showDetails === 1 })}>
             <table>
                 <tbody>
                     <tr className="short-info" onClick={useDebouncedCallback(() => setShowDetails(+!showDetails), 200)}>

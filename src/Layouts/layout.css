@@ -63,3 +63,10 @@
 .transition-smooth-exit-active {
     opacity: 0;
 }
+
+
+@media (min-width: 1600px) {
+    .layout-container {
+        font-size: 28px;
+    }
+}

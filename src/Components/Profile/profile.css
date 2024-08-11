@@ -20,3 +20,10 @@
 
     background: transparent;
 }
+
+
+@media (min-width: 1600px) {
+    .profile-container .money {
+        height: 280px;
+    }
+}

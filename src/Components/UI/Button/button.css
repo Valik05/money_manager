@@ -39,3 +39,10 @@
 .green {
     color: #A9AC5D;
 }
+
+
+@media (min-width: 1600px) {
+    .btn {
+        height: 100px;
+    }
+}

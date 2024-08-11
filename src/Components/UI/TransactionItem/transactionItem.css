@@ -6,11 +6,17 @@
 
     border-bottom: 1px solid #A9AC5D;
 
+    height: 55px;
+
     overflow: hidden;
 
     transition: 0.5s all ease-in;
 
     padding-bottom: 0.5em;
+}
+
+.transaction-item.active {
+    height: 263.8px;
 }
 
 .transaction-item table {
@@ -92,7 +98,7 @@
     font-size: 1.125em;
     color: #6D6C3C;
 
-    width: 67%;
+    width: 50%;
 }
 
 .transaction-item .short-info .icon {
@@ -113,4 +119,17 @@
 .transaction-item table .detail-item {
     color: #6D6C3C;
     padding: 1em 0;
+}
+
+@media (min-width: 1600px) {
+
+    .transaction-item,
+    .transaction-item .short-info {
+        height: 100px;
+    }
+
+    .transaction-item.active {
+        height: 437.2px;
+    }
+
 }
