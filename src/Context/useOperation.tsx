@@ -30,7 +30,8 @@ export const OperationProvider = ({ children }: Props) => {
             .then((res) => {
                 if (res) {
                     console.log(res);
-                    setOperations(res)
+                    setOperations(res);
+                    if (user) localStorage.setItem('currency', JSON.stringify(user?.currency))
                 }
             })
             .catch((error) => {
