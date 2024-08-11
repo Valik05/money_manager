@@ -7,7 +7,6 @@ import { Route, Routes } from "react-router-dom";
 
 export default function App() {
   const { isLoggedIn } = useAuth();
-  console.log(import.meta.env.VITE_APP_BASE_API_URL);
   return (
     <Routes>
       <Route element={<ProtectedRoutes isLoggenIn={!isLoggedIn()} redirectPath={'/auth/sign-in'} />}>

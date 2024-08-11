@@ -34,6 +34,7 @@ export const SettingsProvider = ({ children }: Props) => {
             })
             .catch((error) => {
                 console.log(error);
+                if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => setIsReady(true))
     }, [])
@@ -55,6 +56,7 @@ export const SettingsProvider = ({ children }: Props) => {
             })
             .catch((error) => {
                 console.log(error);
+                if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => setIsReady(true))
     }
@@ -71,6 +73,7 @@ export const SettingsProvider = ({ children }: Props) => {
             })
             .catch((error) => {
                 console.log(error);
+                if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => setIsReady(true))
     }

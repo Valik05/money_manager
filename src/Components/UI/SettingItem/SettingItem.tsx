@@ -7,10 +7,12 @@ type Props = {
 
 const SettingItem = ({ name, Value }: Props) => {
     return (
-        <div className='setting-item-container'>
-            <div className="name">{name}</div>
-            {Value}
-        </div>
+        <table className='setting-item-container'>
+            <tr>
+                <td className="name">{name}</td>
+                <td className="value">{Value}</td>
+            </tr>
+        </table>
     )
 };
 

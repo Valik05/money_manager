@@ -111,7 +111,7 @@ export const UserProvider = ({ children }: Props) => {
         <UserContext.Provider
             value={{ loginUser, user, token, logout, isLoggedIn, registerUser, getUser }}
         >
-            {isReady ? children : <Loader />}
+            {isReady ? <Loader /> : <Loader />}
         </UserContext.Provider>
     );
 };

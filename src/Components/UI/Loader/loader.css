@@ -17,6 +17,9 @@
     width: 80px;
     aspect-ratio: 1;
     display: grid;
+
+    background: url("../../../assets/icons/logo.svg") center / 31px 40px;
+    background-repeat: no-repeat;
 }
 
 .loader-container .loader:before,

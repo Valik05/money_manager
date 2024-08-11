@@ -1,8 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { SystemMsgArr, SystemMsgObjWithOutId } from "../Models/SystemMsg";
+import { SystemMsgObj, SystemMsgObjWithOutId } from "../Models/SystemMsg";
 
 type SystemContextType = {
-    messages: SystemMsgArr,
+    messages: SystemMsgObj[] | [],
     showSystemMsg: (msg: SystemMsgObjWithOutId) => void,
     removeMsg: (id: number) => void,
     clearMsg: () => void
@@ -13,8 +13,8 @@ const SystemMsgContext = createContext<SystemContextType>({} as SystemContextTyp
 type Props = { children: React.ReactNode };
 
 export const SystemMsgProvider = ({ children }: Props) => {
-    const [messages, setMessages] = useState<SystemMsgArr>([]);
-    const [queue, setQueue] = useState<SystemMsgArr>([]);
+    const [messages, setMessages] = useState<SystemMsgObj[] | []>([]);
+    const [queue, setQueue] = useState<SystemMsgObj[] | []>([]);
     const showSystemMsg = (msg: SystemMsgObjWithOutId) => {
         const msgWithId = { ...msg, id: Math.floor(Math.random() * 10000) }
         if (messages.length === 4) {

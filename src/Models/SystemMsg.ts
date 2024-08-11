@@ -9,5 +9,3 @@ export type SystemMsgObjWithOutId = {
     text: string,
 };
 
-export type SystemMsgArr = SystemMsgObj[] | [];
-

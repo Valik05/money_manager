@@ -15,7 +15,7 @@ const Slider = ({ items, nav_items }: Props) => {
                 style={{
                     transform: `translate3d(0, calc(
                         ${nav_items.findIndex(item => item === nav) * -100}% 
-                        ${nav_items.findIndex(item => item === nav) >= 1 ? '- 5px' : ''}) , 0)`,
+                        ${nav_items.findIndex(item => item === nav) >= 1 ? `- ${5 * nav_items.findIndex(item => item === nav)}px` : ''}) , 0)`,
                 }}
             >
                 {items.map((item: React.ComponentType, index: number) => {
