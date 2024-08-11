@@ -133,3 +133,19 @@
     }
 
 }
+
+@media (max-width: 1280px) {
+
+    .transaction-item,
+    .transaction-item .short-info {
+        height: 51px;
+    }
+
+    .transaction-item.active {
+        height: 235.6px;
+    }
+
+    .transaction-item .short-info .amount {
+        font-size: 2em;
+    }
+}

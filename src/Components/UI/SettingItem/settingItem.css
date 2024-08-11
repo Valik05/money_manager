@@ -31,3 +31,9 @@
         height: 100px;
     }
 }
+
+@media (max-width: 1280px) {
+    .setting-item-container {
+        height: 51px;
+    }
+}

@@ -70,3 +70,9 @@
         font-size: 28px;
     }
 }
+
+@media (max-width: 1280px) {
+    .layout-container {
+        font-size: 14px;
+    }
+}

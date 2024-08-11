@@ -16,6 +16,6 @@ export const handleArrowsBlock = (e: KeyDown) => {
 }
 
 export const validationInstructionsForNumber = {
-    validateLength: (str: any) => str.toString().length <= 16 || "The amount has 16 digits limit(",
+    validateLength: (str: any) => str.toString().length <= 6 || "The amount has 6 digits limit(",
     validateAmount: (str: any) => str > 0 || "Amount must be higher than 0",
 }

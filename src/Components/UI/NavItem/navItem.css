@@ -90,3 +90,9 @@
         height: 100px;
     }
 }
+
+@media (max-width: 1280px) {
+    .nav-item {
+        height: 51px;
+    }
+}

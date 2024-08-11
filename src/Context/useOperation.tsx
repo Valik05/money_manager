@@ -55,6 +55,7 @@ export const OperationProvider = ({ children }: Props) => {
                     handleOperation()
                     showSystemMsg({ type: "success", text: "Operation succesfully created" })
                     setOperations(prevOperations => [...prevOperations, res])
+                    getOperation()
                 }
             })
             .catch((error) => {

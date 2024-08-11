@@ -31,3 +31,11 @@
         padding-left: 1vw;
     }
 }
+
+@media (max-width: 1280px) {
+
+    .title {
+        height: 65px;
+    }
+
+}

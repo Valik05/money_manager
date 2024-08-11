@@ -21,9 +21,18 @@
     background: transparent;
 }
 
+.profile-container .money.red {
+    color: #AC5D66;
+}
 
 @media (min-width: 1600px) {
     .profile-container .money {
         height: 280px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .profile-container .money {
+        height: 153px;
     }
 }
