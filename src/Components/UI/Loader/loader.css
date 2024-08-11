@@ -66,3 +66,35 @@
         background-position: 50% 0, 100% 0, 100% 100%, 0 100%
     }
 }
+
+@media (min-width: 1600px) {
+
+    .loader-container .loader {
+        width: 160px;
+        aspect-ratio: 1;
+        display: grid;
+
+        background: url("../../../assets/icons/logo.svg") center / 71px 80px;
+        background-repeat: no-repeat;
+    }
+
+    .loader-container .loader:before,
+    .loader-container .loader:after {
+        content: "";
+        grid-area: 1/1;
+        --c: #0000 calc(100%/3), #A9AC5D 0 calc(2*100%/3), #0000 0;
+        --c1: linear-gradient(90deg, var(--c));
+        --c2: linear-gradient(0deg, var(--c));
+        background: var(--c1), var(--c2), var(--c1), var(--c2);
+        background-size: 300% 6px, 6px 300%;
+        background-repeat: no-repeat;
+        animation: l11 1s infinite linear;
+    }
+
+    .loader-container .loader:after {
+        margin: 15px;
+        transform: scaleX(-1);
+        animation-delay: -.25s;
+    }
+
+}
