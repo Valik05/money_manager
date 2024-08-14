@@ -1,18 +1,30 @@
 import './operations.css';
 import Title from '../UI/Title/Title';
-import TransactionItem from '../UI/TransactionItem/TransactionItem';
 import { useOperation } from '../../Context/useOperation';
+import TransactionsList from '../UI/TransactionsList/TransactionsList';
+import { CSSTransition, SwitchTransition } from 'react-transition-group';
+import AddOperation from '../AddOperation/AddOperation';
+import Button from '../UI/Button/Button';
 
 const Operations = () => {
-    const { operations } = useOperation();
+    const { operations, isAddingOperation, handleOperation } = useOperation();
     return (
         <div className='operations-container'>
             <Title title='Operations List' type={['padding-left']} />
-            <ul className="operations-list">
-                {operations.map(({ amount, owner: { currency: { name } }, description, created_at }, index) => {
-                    return <TransactionItem amount={amount} currency={name} description={description} date={created_at} key={index} />
-                })}
-            </ul>
+            <SwitchTransition mode='out-in'>
+                <CSSTransition key={+isAddingOperation} timeout={500} classNames={'transition-add-operation-switch'}>
+                    {isAddingOperation ? <AddOperation /> : <TransactionsList />}
+                </CSSTransition>
+            </SwitchTransition>
+            <SwitchTransition mode='out-in'>
+                <CSSTransition key={+isAddingOperation} timeout={200} classNames={'transition-smooth'}>
+                    {operations.length !== 0 && isAddingOperation ? <></>
+                        : <Button
+                            onClick={handleOperation}
+                            text={'+ Add Operation'}
+                            styles={['red', operations.length !== 0 ? 'border-top' : '']} />}
+                </CSSTransition>
+            </SwitchTransition>
         </div>
     )
 };

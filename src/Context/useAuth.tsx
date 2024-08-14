@@ -38,7 +38,6 @@ export const UserProvider = ({ children }: Props) => {
                 if (res) {
                     console.log(res);
                     setUser(res)
-                    navigate('/profile')
                     axiosService.defaults.headers.common["Authorization"] = "Bearer " + access;
                 }
             })

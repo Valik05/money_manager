@@ -1,0 +1,11 @@
+.transactions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    overflow: auto;
+}
+
+.transactions-list::-webkit-scrollbar{
+    display: none;
+}

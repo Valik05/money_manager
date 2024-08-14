@@ -1,18 +1,19 @@
 import './settings.css';
 import List from '../UI/List/List';
 import Title from '../UI/Title/Title';
-import SettingItem from '../UI/SettingItem/SettingItem';
 import Input from '../UI/Input/Input';
+import Button from '../UI/Button/Button';
+import SettingItem from '../UI/SettingItem/SettingItem';
 import { useForm } from 'react-hook-form';
 import { useAuth } from '../../Context/useAuth';
+import { useDebouncedCallback } from 'use-debounce';
 import { useSettings } from '../../Context/useSettings';
 import { useSystemMsg } from '../../Context/useSystemMsg';
-import { useDebouncedCallback } from 'use-debounce';
 import { handleArrowsBlock, handlePaste, validationInstructionsForNumber } from '../../helpers/InputHelper';
 
 const Settings = () => {
     const { register, getValues, formState: { errors } } = useForm({ mode: 'onChange' });
-    const { user } = useAuth();
+    const { user, logout } = useAuth();
     const { showSystemMsg } = useSystemMsg();
     const { currencyList, updateCurrency, updateDailyAmount } = useSettings();
     const changeDailyAmount = useDebouncedCallback(() => {
@@ -45,6 +46,7 @@ const Settings = () => {
                     />
                 } />
             <SettingItem name={'Base currency'} Value={<List items={currencyList} type={'type-1'} callback={(currency: number) => updateCurrency({ currency })} />} />
+            <Button text={'Logout'} styles={['green']} onClick={logout}/>
         </div>
     )
 };

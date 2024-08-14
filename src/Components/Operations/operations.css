@@ -6,17 +6,7 @@
     width: 100%;
     height: 100%;
 
+    padding-bottom: 1em;
+
     color: #6D6C3C;
-}
-
-.operations-container .operations-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    overflow: auto;
-}
-
-.operations-container .operations-list::-webkit-scrollbar {
-    display: none;
 }

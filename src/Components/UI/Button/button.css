@@ -6,6 +6,7 @@
     cursor: pointer;
 
     height: 55px;
+    width: 100%;
 
     border: 0;
     border-bottom: 1px solid #A9AC5D;
@@ -32,14 +33,17 @@
     text-shadow: 0px 0px 0px #A9AC5D;
 }
 
-.red {
+.btn.red {
     color: #AC5D66;
 }
 
-.green {
+.btn.green {
     color: #A9AC5D;
 }
 
+.btn.border-top {
+    border-top: 1px solid #A9AC5D;
+}
 
 @media (min-width: 1600px) {
     .btn {
