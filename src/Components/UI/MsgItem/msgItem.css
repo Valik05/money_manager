@@ -33,29 +33,34 @@
 
 .system-msg-content.success {
     color: #A9AC5D;
+    
     box-shadow: -2px -2px 2px rgb(164, 180, 91, 0.3), 2px 2px 2px rgb(164, 180, 91, 0.3);
 }
 
 .system-msg-content.success>.icon {
     background: #A9AC5D;
+
     border-radius: 100%;
 }
 
 .system-msg-content.warning {
     color: #AC9B5D;
+
     box-shadow: -2px -2px 2px rgba(172, 155, 93, 0.3), 2px 2px 2px rgba(172, 155, 93, 0.3);
 }
 
 .system-msg-content.warning>.icon {
     width: 0;
     height: 0;
-    border: 0.875em solid transparent;
+
+    border: 0.9375em solid transparent;
     border-top: none;
-    border-bottom: 1.25em solid rgba(172, 155, 93, 0.85);
+    border-bottom: 1.5em solid rgba(172, 155, 93, 0.85);
 }
 
 .system-msg-content.error {
     color: #AC5D66;
+
     box-shadow: -2px -2px 2px rgba(172, 93, 102, 0.3), 2px 2px 2px rgba(172, 93, 102, 0.3);
 }
 

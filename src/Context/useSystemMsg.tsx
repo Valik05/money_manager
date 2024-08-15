@@ -30,13 +30,9 @@ export const SystemMsgProvider = ({ children }: Props) => {
         }
     }, [messages, queue])
 
-    const removeMsg = (id: number) => {
-        setMessages(prevMessages => prevMessages.filter(item => item.id !== id))
-    }
+    const removeMsg = (id: number) => { setMessages(prevMessages => prevMessages.filter(item => item.id !== id)) }
 
-    const clearMsg = () => {
-        setMessages([])
-    }
+    const clearMsg = () => { setMessages([]) }
     return (
         <SystemMsgContext.Provider value={{ messages, showSystemMsg, removeMsg, clearMsg }} >
             {children}

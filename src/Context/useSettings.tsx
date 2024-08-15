@@ -28,17 +28,16 @@ export const SettingsProvider = ({ children }: Props) => {
         await getAllCurrencyAPI()
             .then((res) => {
                 if (res) {
-                    console.log(res);
+                    // console.log(res);
                     setCurrencyList(res)
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => setIsReady(true))
     }, [])
-
 
     useEffect(() => {
         getAllCurrency()
@@ -49,13 +48,13 @@ export const SettingsProvider = ({ children }: Props) => {
         await updateCurrencyAPI(dates)
             .then((res) => {
                 if (res) {
-                    console.log(res);
+                    // console.log(res);
                     showSystemMsg({ type: 'success', text: 'Currency changed' })
                     getUser()
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => setIsReady(true))
@@ -66,13 +65,13 @@ export const SettingsProvider = ({ children }: Props) => {
         await updateDailyAmountAPI(dates)
             .then((res) => {
                 if (res) {
-                    console.log(res);
+                    // console.log(res);
                     showSystemMsg({ type: 'success', text: 'Daily amount changed' })
                     getUser()
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => setIsReady(true))

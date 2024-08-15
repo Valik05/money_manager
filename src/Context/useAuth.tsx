@@ -104,6 +104,7 @@ export const UserProvider = ({ children }: Props) => {
         setUser(null);
         setToken("");
         navigate("/auth/sign-in");
+        showSystemMsg({ type: 'warning', text: 'You have been singed out' })
     };
 
     return (
