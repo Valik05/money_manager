@@ -9,9 +9,9 @@ type Props = {
 
 const Title = ({ title, type }: Props) => {
     return (
-        <div className={classNames('title', type)}>
+        <h2 className={classNames('title', type)}>
             <span>{title}</span>
-        </div>
+        </h2>
     )
 };
 

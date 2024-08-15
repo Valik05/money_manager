@@ -29,10 +29,12 @@ input[type=number]::-webkit-outer-spin-button {
 
 @font-face {
   font-family: 'Julius';
-  src: url('./assets/fonts/Julius.ttf') format('Truetype');
+  font-display: swap;
+  src: url('https://static.cosmomoll.com/fonts/Julius/Julius.ttf') format('Truetype');
 }
 
 @font-face {
   font-family: 'Poiret';
-  src: url('./assets/fonts/PoiretOne.ttf') format('Truetype');
+  font-display: fallback;
+  src: url('https://static.cosmomoll.com/fonts/Poiret/PoiretOne.ttf') format('Truetype');
 }

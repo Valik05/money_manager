@@ -9,7 +9,7 @@ import Button from '../UI/Button/Button';
 const Operations = () => {
     const { operations, isAddingOperation, handleOperation } = useOperation();
     return (
-        <div className='operations-container'>
+        <section className='operations-container'>
             <Title title='Operations List' type={['padding-left']} />
             <SwitchTransition mode='out-in'>
                 <CSSTransition key={+isAddingOperation} timeout={500} classNames={'transition-add-operation-switch'}>
@@ -25,7 +25,7 @@ const Operations = () => {
                             styles={['red', operations.length !== 0 ? 'border-top' : '']} />}
                 </CSSTransition>
             </SwitchTransition>
-        </div>
+        </section>
     )
 };
 

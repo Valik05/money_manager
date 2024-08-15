@@ -7,11 +7,11 @@ import TransactionsList from '../UI/TransactionsList/TransactionsList';
 const RecentOperations = () => {
     const { handleOperation, isAddingOperation } = useOperation();
     return (
-        <div className="recent-operations-container">
+        <section className="recent-operations-container">
             <Title title='RECENT OPERATIONS:' type={['first-letter', 'padding-left']} />
             <TransactionsList limit={3} />
             <Button text='+ Add Operation' styles={['green']} disabled={isAddingOperation} onClick={handleOperation} />
-        </div>
+        </section>
     )
 };
 

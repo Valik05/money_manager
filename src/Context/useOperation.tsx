@@ -29,14 +29,14 @@ export const OperationProvider = ({ children }: Props) => {
         await getOperationsAPI()
             .then((res) => {
                 if (res) {
-                    console.log(res);
+                    // console.log(res);
                     setOperations(res);
                     if (user) localStorage.setItem('currency', JSON.stringify(user?.currency))
                 }
             })
             .catch((error) => {
                 logout()
-                console.log(error);
+                // console.log(error);
                 if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => {
@@ -60,7 +60,7 @@ export const OperationProvider = ({ children }: Props) => {
                 }
             })
             .catch((error) => {
-                console.log(error);
+                // console.log(error);
                 if (typeof error === 'string') return showSystemMsg({ type: 'error', text: error })
             })
             .finally(() => {

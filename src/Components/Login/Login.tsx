@@ -13,24 +13,22 @@ const Login = () => {
     return (
         <form className='login-container' onSubmit={handleSubmit(submit)}>
             <Title title='SIGN IN:' type={['padding-left']} />
-            <div className="inputs-container">
-                <Input
-                    id='email'
-                    register={register}
-                    options={{ required: true }}
-                    type='text'
-                    placeholder='ENTER E-MAIL'
-                    autoComplete='off'
-                />
-                <Input
-                    id='password'
-                    register={register}
-                    options={{ required: true }}
-                    type='password'
-                    placeholder='ENTER PASSWORD'
-                    autoComplete='off'
-                />
-            </div>
+            <Input
+                id='email'
+                register={register}
+                options={{ required: true }}
+                type='text'
+                placeholder='ENTER E-MAIL'
+                autoComplete='off'
+            />
+            <Input
+                id='password'
+                register={register}
+                options={{ required: true }}
+                type='password'
+                placeholder='ENTER PASSWORD'
+                autoComplete='off'
+            />
             <Button text='LOGIN' />
         </form>
     )

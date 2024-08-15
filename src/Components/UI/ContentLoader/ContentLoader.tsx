@@ -2,17 +2,17 @@ import './contentLoader.css';
 
 const ContentLoader = () => {
     return (
-        <div className='content-loader-container'>
-            <div className="title-loader"><div className="background-opacity"></div></div>
-            <div className="money"><div className="background-opacity"></div></div>
-            <div className="title-loader"><div className="background-opacity"></div></div>
+        <article className='content-loader-container'>
+            <article className="title-loader"><article className="background-opacity"></article></article>
+            <article className="money"><article className="background-opacity"></article></article>
+            <article className="title-loader"><article className="background-opacity"></article></article>
             <ul className="recent-transactions">
-                <li className="add-operation"><div className="background-opacity"></div></li>
-                <li className="add-operation"><div className="background-opacity"></div></li>
-                <li className="add-operation"><div className="background-opacity"></div></li>
-                <li className="add-operation"><div className="background-opacity"></div></li>
+                <li className="add-operation"><article className="background-opacity"></article></li>
+                <li className="add-operation"><article className="background-opacity"></article></li>
+                <li className="add-operation"><article className="background-opacity"></article></li>
+                <li className="add-operation"><article className="background-opacity"></article></li>
             </ul>
-        </div>
+        </article>
     )
 };
 

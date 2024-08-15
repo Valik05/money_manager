@@ -11,7 +11,7 @@ const DetailItem = ({ name, value, isAnimation }: Props) => {
     return (
         <tr style={{ "opacity": isAnimation }} className="detail-item">
             <td colSpan={3}>
-                <div className="detail">{name}: {value}</div>
+                <article className="detail">{name}: {value}</article>
                 <hr className={classNames({ active: isAnimation === 1 })} />
             </td>
         </tr>

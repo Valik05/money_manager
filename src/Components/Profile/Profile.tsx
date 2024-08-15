@@ -11,7 +11,7 @@ const Profile = () => {
     const { isAddingOperation } = useOperation();
     const { user } = useAuth();
     return (
-        <div className='profile-container'>
+        <section className='profile-container'>
             <Title title='YOU CAN SPEND TODAY:' type={['first-letter', 'padding-left']} />
             <div className={classNames("money", { red: Number(user?.balance) < 0 })}>{user?.balance || 0}<span>{user?.currency.name || 'USD'}</span></div>
             <SwitchTransition mode='out-in'>
@@ -19,7 +19,7 @@ const Profile = () => {
                     {isAddingOperation ? <AddOperation /> : <RecentOperations />}
                 </CSSTransition>
             </SwitchTransition>
-        </div>
+        </section>
     )
 };
 

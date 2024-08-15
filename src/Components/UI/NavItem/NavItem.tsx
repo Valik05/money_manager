@@ -15,7 +15,7 @@ const NavItem = ({ title, query }: Props) => {
             className={classNames('nav-item', { active: nav === title })}
             onClick={() => { if (title !== nav) navigate(`/${query || ''}${query ? '/' : ''}${title}`) }}
         >
-            <div className="text">{title.replace('-', ' ')}</div>
+            <article className="text">{title.replace('-', ' ')}</article>
         </li>
     )
 };

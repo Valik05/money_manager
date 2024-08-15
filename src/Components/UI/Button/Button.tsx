@@ -11,7 +11,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = ({ text, styles, ...buttonProps }: Props) => {
     return (
         <button className={classNames('btn', styles)} {...buttonProps}>
-            <div className="text">{text}</div>
+            <span className="text">{text}</span>
         </button>
     )
 

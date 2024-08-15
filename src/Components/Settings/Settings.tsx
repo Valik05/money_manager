@@ -26,7 +26,7 @@ const Settings = () => {
         updateDailyAmount({ daily_amount: getValues('daily_amount') })
     }, 1000)
     return (
-        <div className='settings-container'>
+        <section className='settings-container'>
             <Title title='Settings' type={['padding-left']} />
             <SettingItem name={'Daily Amount'} Value=
                 {
@@ -47,7 +47,7 @@ const Settings = () => {
                 } />
             <SettingItem name={'Base currency'} Value={<List items={currencyList} type={'type-1'} callback={(currency: number) => updateCurrency({ currency })} />} />
             <Button text={'Logout'} styles={['green']} onClick={logout}/>
-        </div>
+        </section>
     )
 };
 

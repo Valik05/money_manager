@@ -10,7 +10,7 @@ type Props = {
 const Slider = ({ items, nav_items }: Props) => {
     const { nav } = useParams();
     return (
-        <div className='slider-container'>
+        <article className='slider-container'>
             <ul className="slider"
                 style={{
                     transform: `translate3d(0, calc(
@@ -22,7 +22,7 @@ const Slider = ({ items, nav_items }: Props) => {
                     return <Slide Path={item} key={index} />
                 })}
             </ul>
-        </div>
+        </article>
     )
 };
 

@@ -24,8 +24,8 @@ const MsgItem = ({ id, text, type, index }: Props) => {
             <CSSTransition key={isDelayed} timeout={300} classNames="transition-system-msg">
                 {isDelayed === 1 ?
                     <li className={classNames('system-msg-content', type)}>
-                        <div className="icon"></div>
-                        <div className="text">{text}</div>
+                        <aside className="icon"></aside>
+                        <article className="text">{text}</article>
                     </li>
                     : <></>}
             </CSSTransition>

@@ -36,7 +36,7 @@ export const UserProvider = ({ children }: Props) => {
         await getUserAPI()
             .then((res) => {
                 if (res) {
-                    console.log(res);
+                    // console.log(res);
                     setUser(res)
                     axiosService.defaults.headers.common["Authorization"] = "Bearer " + access;
                 }

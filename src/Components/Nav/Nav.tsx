@@ -9,14 +9,14 @@ type Props = {
 
 const Nav = ({ nav_items, query = false }: Props) => {
     return (
-        <div className='nav-container'>
+        <nav className='nav-container'>
             <Title title='Menu' type={['center']} />
             <ul className="nav-items-list">
                 {nav_items.map((item, index) => {
                     return <NavItem title={item} query={query} key={index} />
                 })}
             </ul>
-        </div>
+        </nav>
     )
 };
 

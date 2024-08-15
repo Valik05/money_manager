@@ -11,16 +11,16 @@ type Props = {
 
 const Main = ({ nav_items }: Props) => {
     return (
-        <div className="main-page-container">
-            <div className="main-page-nav"><Nav nav_items={nav_items} /></div>
-            <div className="main-page-content">
+        <main className="main-page-container">
+            <Nav nav_items={nav_items} />
+            <article className="main-page-content">
                 <OperationProvider>
                     <SettingsProvider>
                         <Slider items={[lazy(() => import('../../Components/Profile/Profile')), lazy(() => import('../../Components/Operations/Operations')), lazy(() => import('../../Components/Settings/Settings'))]} nav_items={nav_items} />
                     </SettingsProvider>
                 </OperationProvider>
-            </div>
-        </div>
+            </article>
+        </main>
     )
 };
 
