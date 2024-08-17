@@ -3,8 +3,8 @@ FROM node
 
 # Устанавливаем переменные окружения на этапе сборки
 ARG VITE_APP_BASE_API_URL
-ARG VITE_APP_BASE_DISCORD_URL=https://discord.gg/example
-ARG VITE_APP_BASE_GITHUB_URL=https://github.com/example
+ARG VITE_APP_BASE_DISCORD_URL
+ARG VITE_APP_BASE_GITHUB_URL
 
 ENV VITE_APP_BASE_API_URL=https://back-cash-planner.sitera.tech/api/v1
 ENV VITE_APP_BASE_DISCORD_URL=https://discord.gg/JugjTnH6
