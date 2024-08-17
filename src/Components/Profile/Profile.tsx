@@ -13,7 +13,7 @@ const Profile = () => {
     return (
         <section className='profile-container'>
             <Title title='YOU CAN SPEND TODAY:' type={['first-letter', 'padding-left']} />
-            <div className={classNames("money", { red: Number(user?.balance) < 0 })}>{user?.balance || 0}<span>{user?.currency.name || 'USD'}</span></div>
+            <div className={classNames("money", { red: Number(user?.balance) < 0 })}>{Number(user?.balance) || 0}<span>{user?.currency.name || 'USD'}</span></div>
             <SwitchTransition mode='out-in'>
                 <CSSTransition key={+isAddingOperation} timeout={500} classNames={'transition-add-operation-switch'}>
                     {isAddingOperation ? <AddOperation /> : <RecentOperations />}

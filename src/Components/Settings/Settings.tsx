@@ -36,7 +36,7 @@ const Settings = () => {
                         onKeyDown={handleArrowsBlock}
                         onPaste={(e) => handlePaste(e, showSystemMsg)}
                         register={register}
-                        placeholder={user?.daily_amount || '0'}
+                        placeholder={`${Number(user?.daily_amount)}` || '0'}
                         options={{
                             valueAsNumber: true,
                             onChange: changeDailyAmount,
@@ -46,7 +46,7 @@ const Settings = () => {
                     />
                 } />
             <SettingItem name={'Base currency'} Value={<List items={currencyList} type={'type-1'} callback={(currency: number) => updateCurrency({ currency })} />} />
-            <Button text={'Logout'} styles={['green']} onClick={logout}/>
+            <Button text={'Logout'} styles={['green']} onClick={logout} />
         </section>
     )
 };
