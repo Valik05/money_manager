@@ -19,7 +19,7 @@ const OperationsContext = createContext<OperationContext>({} as OperationContext
 type Props = { children: React.ReactNode };
 
 export const OperationProvider = ({ children }: Props) => {
-    const { logout, user } = useAuth();
+    const { logout, user, getUser } = useAuth();
     const { showSystemMsg } = useSystemMsg();
     const [isAddingOperation, setIsAddingOperation] = useState<boolean>(false);
     const [operations, setOperations] = useState<Operation[] | []>([]);
@@ -57,6 +57,7 @@ export const OperationProvider = ({ children }: Props) => {
                     showSystemMsg({ type: "success", text: "Operation succesfully created" })
                     setOperations(prevOperations => [...prevOperations, res])
                     getOperation()
+                    getUser();
                 }
             })
             .catch((error) => {
