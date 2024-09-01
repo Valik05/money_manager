@@ -15,3 +15,9 @@
 .slide-item::-webkit-scrollbar {
     display: none;
 }
+
+@media (max-width: 905px) {
+    .slide-item {
+        padding: 0 9px 0 9px;
+    }
+}

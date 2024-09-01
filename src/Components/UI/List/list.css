@@ -19,8 +19,19 @@
 }
 
 @media (max-width: 1280px) {
-
     .list {
         height: 48px;
+    }
+}
+
+@media (max-width: 905px) {
+    .list {
+        height: 53px;
+    }
+}
+
+@media (max-width: 600px) {
+    .list {
+        height: 43px;
     }
 }

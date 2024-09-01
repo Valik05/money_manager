@@ -1,17 +1,15 @@
 .content-loader-container {
     display: flex;
-    justify-content: center;
     flex-direction: column;
 
-    padding: 0 45px 0 3px;
+    padding: 15px 45px 15px 3px;
 
     height: 100%;
 }
 
 .content-loader-container .title-loader {
-    height: 75px;
+    height: 10%;
 }
-
 
 .content-loader-container .money {
     display: flex;
@@ -21,7 +19,7 @@
     font-size: 5em;
     color: #3A3C26;
 
-    height: 165px;
+    height: 40%;
 
     background: transparent;
 }
@@ -30,10 +28,11 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    height: 40%;
 }
 
 .content-loader-container .recent-transactions .add-operation {
-    height: 70px;
+    height: 25%;
 }
 
 .background-opacity {
@@ -54,4 +53,11 @@
     100% {
         background-color: hsl(34.23deg 63.17% 48.22% / 28%);
     }
+}
+
+@media (max-width: 905px) {
+    .content-loader-container {
+        padding: 15px 9px 15px 3px;
+    }
+
 }

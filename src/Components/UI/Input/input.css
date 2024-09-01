@@ -53,17 +53,25 @@
 
 
 @media (min-width: 1600px) {
-
     .input-content input {
         height: 100px;
     }
-
 }
 
 @media (max-width: 1280px) {
-
     .input-content input {
         height: 51px;
     }
+}
 
+@media (max-width: 905px) {
+    .input-content input {
+        height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .input-content input {
+        height: 45px;
+    }
 }

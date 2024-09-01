@@ -76,3 +76,19 @@
         font-size: 14px;
     }
 }
+
+@media (max-width: 905px) {
+    .layout-container {
+        padding: 18px 14px;
+
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .layout-container {
+        padding: 14px 10px;
+
+        font-size: 12px;
+    }
+}

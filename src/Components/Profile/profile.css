@@ -36,3 +36,16 @@
         height: 153px;
     }
 }
+
+@media (max-width: 905px) {
+    .profile-container .money {
+        height: 165px;
+    }
+}
+
+@media (max-width: 600px) {
+    .profile-container .money {
+        height: 135px;
+        font-size: 3.5em;
+    }
+}

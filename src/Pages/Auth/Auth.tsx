@@ -10,7 +10,7 @@ type Props = {
 const Auth = ({ nav_items }: Props) => {
     return (
         <main className="auth-page-container">
-            <Nav nav_items={nav_items} query='auth' />
+            <Nav nav_items={nav_items} />
             <article className="auth-page-content">
                 <Slider items={[lazy(() => import('../../Components/Login/Login')), lazy(() => import('../../Components/Register/Register')), lazy(() => import('../../Components/Support/Support'))]} nav_items={nav_items} />
             </article>

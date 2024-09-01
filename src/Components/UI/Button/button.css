@@ -56,3 +56,15 @@
         height: 51px;
     }
 }
+
+@media (max-width: 905px) {
+    .btn {
+        height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn {
+        height: 45px;
+    }
+}

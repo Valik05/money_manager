@@ -46,9 +46,11 @@
     position: absolute;
 }
 
-.list-item-container:hover:after {
-    height: 60%;
-    width: 95%;
+@media (hover: hover) {
+    .list-item-container:hover:after {
+        height: 60%;
+        width: 95%;
+    }
 }
 
 .list-item-container:active:after {
@@ -79,5 +81,17 @@
 @media (max-width: 1280px) {
     .list-item-container {
         height: 48px;
+    }
+}
+
+@media (max-width: 905px) {
+    .list-item-container {
+        height: 53px;
+    }
+}
+
+@media (max-width: 600px) {
+    .list-item-container {
+        height: 43px;
     }
 }

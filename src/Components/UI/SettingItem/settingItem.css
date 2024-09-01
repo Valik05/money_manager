@@ -12,6 +12,10 @@
 }
 
 .setting-item-container td {
+    padding: 0 0 0 36px;
+}
+
+.setting-item-container td:first-child {
     padding: 0 36px 0 0;
 }
 
@@ -35,5 +39,32 @@
 @media (max-width: 1280px) {
     .setting-item-container {
         height: 51px;
+    }
+}
+
+@media (max-width: 905px) {
+    .setting-item-container {
+        height: 55px;
+        padding: 0 70px 0 36px;
+    }
+
+    .setting-item-container td:first-child {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .setting-item-container {
+        height: 45px;
+        padding: 0 0 0 18px;
+    }
+
+    .setting-item-container td {
+        padding: 0 0 0 10px;
+    }
+
+    .setting-item-container .name {
+        width: 40%;
     }
 }

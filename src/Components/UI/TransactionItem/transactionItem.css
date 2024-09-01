@@ -149,3 +149,41 @@
         font-size: 2em;
     }
 }
+
+@media (max-width: 905px) {
+
+    .transaction-item,
+    .transaction-item .short-info {
+        height: 55px;
+    }
+
+    .transaction-item.active {
+        height: 262.2px;
+    }
+
+    .transaction-item .short-info .amount {
+        font-size: 1.75em;
+        width: 30%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .transaction-item,
+    .transaction-item .short-info {
+        height: 45px;
+    }
+
+    .transaction-item.active {
+        height: 200px;
+    }
+
+    .transaction-item .short-info .description {
+        font-size: 1em;
+    }
+
+    .transaction-item .short-info .amount {
+        font-size: 1.5em;
+        width: 40%;
+    }
+}

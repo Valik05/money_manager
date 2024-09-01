@@ -1,4 +1,6 @@
 .auth-page-container {
+    position: relative;
+
     display: flex;
     gap: 12px;
 
@@ -23,4 +25,11 @@
 .auth-page-container .auth-page-content {
     width: 75%;
     height: 100%;
+}
+
+
+@media (max-width: 905px) {
+    .auth-page-container .auth-page-content {
+        width: 100%;
+    }
 }

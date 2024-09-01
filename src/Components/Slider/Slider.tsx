@@ -1,6 +1,7 @@
 import './slider.css';
 import Slide from '../UI/Slide/Slide';
 import { useParams } from 'react-router-dom';
+import { useNavigation } from '../../Context/useNavigation';
 
 type Props = {
     items: React.ComponentType[],
@@ -9,8 +10,13 @@ type Props = {
 
 const Slider = ({ items, nav_items }: Props) => {
     const { nav } = useParams();
+    const { handleTouchStart, handleTouchMove, handleTouchEnd } = useNavigation();
     return (
-        <article className='slider-container'>
+        <article className="slider-container"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={() => handleTouchEnd(nav_items)}
+        >
             <ul className="slider"
                 style={{
                     transform: `translate3d(0, calc(

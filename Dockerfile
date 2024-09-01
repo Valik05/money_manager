@@ -1,15 +1,6 @@
 # Используйте базовый образ с Node.js
 FROM node
 
-# Устанавливаем переменные окружения на этапе сборки
-ARG VITE_APP_BASE_API_URL
-ARG VITE_APP_BASE_DISCORD_URL
-ARG VITE_APP_BASE_GITHUB_URL
-
-ENV VITE_APP_BASE_API_URL=https://back-cash-planner.sitera.tech/api/v1
-ENV VITE_APP_BASE_DISCORD_URL=https://discord.gg/JugjTnH6
-ENV VITE_APP_BASE_GITHUB_URL=https://github.com/Valik05
-
 # Установите рабочую директорию внутри контейнера
 WORKDIR /app
 
@@ -24,6 +15,9 @@ COPY . .
 
 # Собираем проект, чтобы создать директорию dist
 RUN npm run build
+
+# Copy SEO file
+COPY robots.txt ./dist/robots.txt
 
 # Устанавливаем сервер для раздачи статических файлов
 RUN npm install -g serve

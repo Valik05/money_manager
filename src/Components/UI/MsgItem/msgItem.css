@@ -33,7 +33,7 @@
 
 .system-msg-content.success {
     color: #A9AC5D;
-    
+
     box-shadow: -2px -2px 2px rgb(164, 180, 91, 0.3), 2px 2px 2px rgb(164, 180, 91, 0.3);
 }
 
@@ -73,5 +73,24 @@
         width: 750px;
 
         border-radius: 30px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .system-msg-content {
+        width: 400px;
+    }
+}
+
+@media (max-width: 905px) {
+    .system-msg-content {
+        width: 450px;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .system-msg-content {
+        width: 250px;
     }
 }
