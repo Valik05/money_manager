@@ -3,6 +3,8 @@ pipeline {
 
     environment {
         VITE_APP_BASE_API_URL = "https://back-cash-planner.sitera.tech/api/v1"
+        VITE_APP_BASE_DISCORD_URL="https://discord.gg/JugjTnH6"
+        VITE_APP_BASE_GITHUB_URL="https://github.com/Valik05/money_manager"
         DOCKERHUB_CREDENTIALS = credentials('docker-iuda')
         IMAGE_NAME = "iuda194/sicst_front:prod"
     }
