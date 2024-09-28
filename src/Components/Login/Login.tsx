@@ -4,9 +4,11 @@ import Input from '../UI/Input/Input';
 import Title from '../UI/Title/Title';
 import { useAuth } from '../../Context/useAuth';
 import { FieldValues, useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 
 const Login = () => {
+    const navigate = useNavigate();
     const { loginUser } = useAuth();
     const { handleSubmit, register } = useForm();
     const submit = (dates: FieldValues) => loginUser(dates)
@@ -29,7 +31,8 @@ const Login = () => {
                 placeholder='ENTER PASSWORD'
                 autoComplete='off'
             />
-            <Button text='LOGIN' />
+            <Button text='LOGIN' type='submit' />
+            <Button text='Sign up' onClick={() => navigate('/auth/sign-up')} />
         </form>
     )
 };
