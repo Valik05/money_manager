@@ -7,6 +7,10 @@ WORKDIR /app
 # Копируем package.json и package-lock.json для установки зависимостей
 COPY package*.json ./
 
+ENV VITE_APP_BASE_API_URL=https://back-cash-planner.sitera.tech/api/v1
+ENV VITE_APP_BASE_DISCORD_URL=https://discord.gg/JugjTnH6
+ENV VITE_APP_BASE_GITHUB_URL=https://github.com/Valik05/money_manager
+
 # Установка зависимостей
 RUN npm install
 
