@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     environment {
+        KUBECONFIG = credentials('kubeconfig')
         DOCKERHUB_CREDENTIALS = credentials('docker-iuda')
         IMAGE_NAME = "iuda194/sicst_front:prod"
     }
@@ -22,6 +23,19 @@ pipeline {
                     sh '''
                     echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin
                     docker push ${IMAGE_NAME}
+                    '''
+                }
+            }
+        }
+
+
+        stage('Deploy to Kubernetes') {
+            steps {
+                script {
+                    // Выполнение команды для перезапуска Deployment в Kubernetes
+                    sh '''
+                    export KUBECONFIG=${KUBECONFIG}
+                    kubectl rollout restart deployment/sicst-front
                     '''
                 }
             }
