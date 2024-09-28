@@ -30,6 +30,7 @@ const AddOperation = () => {
             />
             <Input
                 id='amount'
+                step={0.01}
                 register={register}
                 onKeyDown={handleArrowsBlock}
                 onPaste={(e) => handlePaste(e, showSystemMsg)}

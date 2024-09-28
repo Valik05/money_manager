@@ -32,6 +32,7 @@ const Settings = () => {
                 {
                     <Input
                         id="daily_amount"
+                        step={0.01}
                         type='number'
                         onKeyDown={handleArrowsBlock}
                         onPaste={(e) => handlePaste(e, showSystemMsg)}
