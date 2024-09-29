@@ -29,6 +29,6 @@ Money Manager is an application for managing impulse spending, where clients set
 
 ## TODO
 
-- [ ] (Translations to multiple languages)
-- [ ] (Receipt scanning for adding transactions)
+- [ ] Translations to multiple languages
+- [ ] Receipt scanning for adding transactions
   
