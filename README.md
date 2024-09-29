@@ -14,6 +14,7 @@ Money Manager is an application for managing impulse spending, where clients set
 ## Technology Stack
 
 - `Frontend`: Vite JS, React, TypeScript
+- `DevOps`: Jenkins, Docker, Kubernetes
 
 ## Project Links
 
