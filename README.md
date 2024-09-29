@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Money Manager 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Alt text](./src/assets/icons/logo.svg "logo")
 
-Currently, two official plugins are available:
+Money Manager is an application for managing impulse spending, where clients set a daily limit for their expenses, and any remaining funds can accumulate and be used later.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- `Daily Limit Setting`: Clients can specify the amount they are willing to spend on impulse purchases each day.
+- `Balance Accumulation`: If a client does not spend their entire limit for the day, the remaining funds accumulate in their balance.
+- `Transactions`: Clients can log their expenses, reducing their current balance.
+- `Example`: If a limit of $5 is set per day and the client does not spend any money for three days, they will have $15 accumulated in their balance.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Technology Stack
 
-- Configure the top-level `parserOptions` property like this:
+- `Frontend`: Vite JS, React, TypeScript
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Project Links
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- `Project`: [Money Manager](https://cash-planner.sitera.tech/)
+- `Backend`: [Backend API](https://back-cash-planner.sitera.tech/)
+- `Backend Repo`: [Repo](https://github.com/IUDA194/cash_plan_back)
+
+
+## Changelog
+
+### Version 1.0.0
+- Project initialization
+
+## TODO
+
+- [ ] (Translations to multiple languages)
+- [ ] (Receipt scanning for adding transactions)
+  
