@@ -64,6 +64,28 @@
     opacity: 0;
 }
 
+.transition-system-msg-enter {
+    opacity: 0;
+    transform: translateX(-50%);
+}
+
+.transition-system-msg-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.2s ease-in;
+}
+
+.transition-system-msg-exit {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.2s ease-out;
+}
+
+.transition-system-msg-exit-active {
+    transform: translateX(50%);
+    opacity: 0;
+}
+
 
 @media (min-width: 1600px) {
     .layout-container {

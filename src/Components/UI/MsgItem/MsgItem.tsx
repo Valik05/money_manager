@@ -17,7 +17,7 @@ const MsgItem = ({ id, text, type, index }: Props) => {
     useEffect(() => {
         setTimeout(() => { setIsDelayed(1) }, index * 100)
         setTimeout(() => { setIsDelayed(0) }, 2000 - (index * 100))
-        setTimeout(() => { removeMsg(id) }, 2000)
+        setTimeout(() => { removeMsg(id) }, 2300)
     }, [])
     return (
         <SwitchTransition mode="out-in">
